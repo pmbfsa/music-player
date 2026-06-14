@@ -1,0 +1,126 @@
+/* Images created by: https://unsplash.com/@pawel_czerwinski */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  min-height: 100vh;
+
+  background: #c9ced3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.2rem;
+}
+
+.img-container {
+  position: relative;
+  top: -5rem;
+  left: 5rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+
+  margin-top: 0.5px;
+}
+
+/* Progress */
+.progress-container {
+  cursor: pointer;
+
+  height: 0.4rem;
+  width: 90%;
+  margin: 4rem 2rem;
+
+  background: #fff;
+
+  border-radius: 0.5rem;
+}
+
+.progress {
+  background: #242323;
+
+  border-radius: 0.5rem;
+
+  height: 100%;
+  /* change this to show progress */
+  width: 66%;
+
+  transition: width 0.1s linear;
+}
+
+.duration-wrapper {
+  position: relative;
+  top: -2.5rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Controls */
+.player-controls {
+  position: relative;
+  top: -1.5rem;
+  left: 12rem;
+
+  width: 20rem;
+}
+
+.fas {
+  color: rgb(129, 129, 129);
+  font-size: 3rem;
+
+  margin-right: 3rem;
+}
+
+.main-button {
+  position: relative;
+  top: 0.3rem;
+
+  font-size: 4rem;
+}
+
+/***********************/
+/**** MEDIA QUERIES ****/
+/***********************/
+
+/* Monitor 2K (1920px) */
+@media screen and (max-width: 120em) {
+  html {
+    /* 10px = 1rem */
+    font-size: 62.5%;
+  }
+}
+
+/* iPhone - Vertical (376px) */
+@media screen and (max-width: 23.5em) {
+  .img-container {
+    left: 2.9rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .player-controls {
+    top: -1rem;
+    left: 10rem;
+  }
+}
