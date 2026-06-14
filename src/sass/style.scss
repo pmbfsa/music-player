@@ -1,3 +1,12 @@
+// Font Awesome
+@use './fontawesome/variables' with (
+  $font-path: '/src/assets/fonts'
+);
+@use './fontawesome/fontawesome';
+@use './fontawesome/fa' as fa;
+@use './fontawesome/solid' as fa-solid;
+@use './fontawesome/brands' as fa-brands;
+
 /* Images created by: https://unsplash.com/@pawel_czerwinski */
 
 * {
@@ -19,6 +28,7 @@ main {
   font-family: 'Spartan', sans-serif;
 }
 
+/* Song */
 .player-container {
   width: 40rem;
   height: 50rem;
@@ -50,17 +60,26 @@ main {
   box-shadow: 0 0.5rem 3rem 0.5rem rgba(0, 0, 0, 0.5);
 }
 
-h2 {
+.title {
   text-align: center;
   font-size: 2.5rem;
 }
 
-h3 {
+.artist {
   text-align: center;
   font-size: 2rem;
   font-weight: 400;
 
   margin-top: 0.5px;
+}
+
+/* Duration Wrapper */
+.duration-wrapper {
+  width: 90%;
+  margin-top: 3rem;
+
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Progress */
@@ -69,7 +88,8 @@ h3 {
 
   height: 0.4rem;
   width: 90%;
-  margin: 4rem 2rem;
+
+  margin-top: 0.5rem;
 
   background: #fff;
 
@@ -82,40 +102,33 @@ h3 {
   border-radius: 0.5rem;
 
   height: 100%;
-  /* change this to show progress */
-  width: 66%;
+  width: 66%; /* change this to show progress */
 
   transition: width 0.1s linear;
 }
 
-.duration-wrapper {
-  position: relative;
-  top: -2.5rem;
-
-  display: flex;
-  justify-content: space-between;
-}
-
 /* Controls */
 .player-controls {
-  position: relative;
-  top: -1.5rem;
-  left: 12rem;
+  margin-top: 2rem;
 
-  width: 20rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
 }
 
-.fas {
+.fa-solid {
+  cursor: pointer;
+  user-select: none;
+
   color: rgb(129, 129, 129);
   font-size: 3rem;
+}
 
-  margin-right: 3rem;
+.fa-solid:hover {
+  filter: brightness(80%);
 }
 
 .main-button {
-  position: relative;
-  top: 0.3rem;
-
   font-size: 4rem;
 }
 

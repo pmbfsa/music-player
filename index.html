@@ -10,6 +10,7 @@
   <body>
     <main>
       <div class="player-container">
+        <!-- Song -->
         <div class="image-container">
           <img
             src="./src/assets/img/jacinto-1.jpg"
@@ -17,9 +18,24 @@
             class="image"
           />
         </div>
-        <h2 id="title">Eletric Chill Machine</h2>
-        <h3 id="artist">Jacinto</h3>
-        <audio src="./src/assets/music/jacinto-1.mp3" controls></audio>
+        <h2 class="title" id="title">Eletric Chill Machine</h2>
+        <h3 class="artist" id="artist">Jacinto</h3>
+        <audio src="./src/assets/music/jacinto-1.mp3" class="audio"></audio>
+        <!-- Duration Wrapper -->
+        <div class="duration-wrapper">
+          <span id="current-time">0:00</span>
+          <span id="duration">2:06</span>
+        </div>
+        <!-- Progress -->
+        <div class="progress-container" id="progress-container">
+          <div class="progress" id="progress"></div>
+        </div>
+        <!-- Controls -->
+        <div class="player-controls">
+          <i class="fa-solid fa-backward" id="prev" title="Previous"></i>
+          <i class="fa-solid fa-play main-button" id="play" title="Play"></i>
+          <i class="fa-solid fa-forward" id="next" title="Next"></i>
+        </div>
       </div>
     </main>
   </body>
