@@ -27,15 +27,73 @@
           <span id="current-time">0:00</span>
           <span id="duration">0:00</span>
         </div>
-        <!-- Progress -->
-        <div class="progress-container" id="progress-container">
-          <div class="progress" id="progress"></div>
+        <!-- Audio Progress -->
+        <div
+          class="progress-container audio-progress-container"
+          id="audio-progress-container"
+        >
+          <div class="progress" id="audio-progress"></div>
         </div>
         <!-- Controls -->
         <div class="player-controls">
-          <i class="fa-solid fa-backward" id="prev" title="Previous"></i>
-          <i class="fa-solid fa-play main-button" id="play" title="Play"></i>
-          <i class="fa-solid fa-forward" id="next" title="Next"></i>
+          <div class="control-container volume-container">
+            <i
+              class="fa-solid fa-volume-high volume-button"
+              id="volume"
+              title="Mute"
+            ></i>
+            <div
+              class="progress-container volume-progress-container"
+              id="volume-progress-container"
+            >
+              <div class="progress" id="volume-progress"></div>
+            </div>
+          </div>
+          <div class="control-container">
+            <i class="fa-solid fa-backward" id="prev" title="Previous"></i>
+            <i class="fa-solid fa-play main-button" id="play" title="Play"></i>
+            <i class="fa-solid fa-forward" id="next" title="Next"></i>
+          </div>
+          <div class="control-container ellipsis-container">
+            <i class="fa-regular fa-ellipsis open-popup" id="open-popup"></i>
+          </div>
+          <dialog class="info-popup" id="info-popup">
+            <div class="info-popup-container">
+              <i class="fa-solid fa-xmark close-popup" id="close-popup"></i>
+              <div class="info-container">
+                <i class="fa-solid fa-caret-left info-icon"></i>
+                <span>Backward</span>
+              </div>
+              <div class="info-container">
+                <i class="fa-solid fa-caret-right info-icon"></i>
+                <span>Forward</span>
+              </div>
+              <div class="info-container">
+                <i class="fa-solid fa-caret-up info-icon"></i>
+                <span>Volume+</span>
+              </div>
+              <div class="info-container">
+                <i class="fa-solid fa-caret-down info-icon"></i>
+                <span>Volume-</span>
+              </div>
+              <div class="info-container">
+                <i class="fa-solid fa-b info-icon"></i>
+                <span>Previous</span>
+              </div>
+              <div class="info-container">
+                <i class="fa-solid fa-n info-icon"></i>
+                <span>Next</span>
+              </div>
+              <div class="info-container">
+                <i class="fa-solid fa-p info-icon"></i>
+                <span>Play/Pause</span>
+              </div>
+              <div class="info-container">
+                <i class="fa-solid fa-m info-icon"></i>
+                <span>Mute/Unmute</span>
+              </div>
+            </div>
+          </dialog>
         </div>
       </div>
     </main>

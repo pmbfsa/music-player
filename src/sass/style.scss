@@ -28,9 +28,32 @@ main {
   font-family: 'Spartan', sans-serif;
 }
 
+/* Progress Bar */
+.progress-container {
+  cursor: pointer;
+
+  height: 0.4rem;
+  width: 100%;
+
+  background: #fff;
+
+  border-radius: 0.5rem;
+}
+
+.progress {
+  background: #242323;
+
+  border-radius: 0.5rem;
+
+  height: 100%;
+  width: 0%;
+
+  transition: width 0.1s linear;
+}
+
 /* Song */
 .player-container {
-  width: 40rem;
+  width: 50rem;
 
   background: #e7e7e7;
 
@@ -46,8 +69,8 @@ main {
   position: relative;
   top: -5rem;
 
-  width: 30rem;
-  height: 30rem;
+  width: 35rem;
+  height: 35rem;
 }
 
 .image {
@@ -81,54 +104,140 @@ main {
   justify-content: space-between;
 }
 
-/* Progress */
-.progress-container {
-  cursor: pointer;
-
-  height: 0.4rem;
+/* Audio Progress */
+.audio-progress-container {
   width: 90%;
 
   margin-top: 0.5rem;
-
-  background: #fff;
-
-  border-radius: 0.5rem;
-}
-
-.progress {
-  background: #242323;
-
-  border-radius: 0.5rem;
-
-  height: 100%;
-  width: 0%;
-
-  transition: width 0.1s linear;
 }
 
 /* Controls */
 .player-controls {
+  width: 90%;
+
   margin: 2rem 0;
 
   display: flex;
   align-items: center;
-  gap: 3rem;
+  justify-content: space-between;
 }
 
-.fa-solid {
+.control-container {
+  width: 30%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fa-solid,
+.fa-regular {
   cursor: pointer;
   user-select: none;
 
-  color: rgb(129, 129, 129);
+  color: #818181;
   font-size: 3rem;
 }
 
-.fa-solid:hover {
+.fa-solid:hover,
+.fa-regular:hover {
   filter: brightness(80%);
 }
 
 .main-button {
   font-size: 4rem;
+}
+
+.volume-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.volume-button {
+  font-size: 2.5rem;
+}
+
+.volume-progress-container {
+  width: 70%;
+}
+
+.volume-progress {
+  width: 50%;
+}
+
+.muted {
+  background: #9e9e9e;
+}
+
+.ellipsis-container {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+// Info PopUp
+.info-popup {
+  position: relative;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background: #f0f0f0;
+
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+  box-shadow: 0 1.5rem 3rem 0.5rem rgba(0, 0, 0, 0.3);
+
+  user-select: none;
+}
+
+.close-popup {
+  position: absolute;
+  top: 5%;
+  right: 2.5%;
+
+  font-size: 2rem;
+}
+
+.info-popup-container {
+  width: 40rem;
+
+  padding: 3rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  row-gap: 2rem;
+}
+
+.info-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.info-icon {
+  cursor: default;
+
+  color: #fff;
+  font-size: 1.5rem;
+
+  width: 3rem;
+  height: 3rem;
+
+  border-radius: 0.5rem;
+
+  background: #818181;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-icon:hover {
+  filter: none;
 }
 
 /***********************/
@@ -157,5 +266,12 @@ main {
   .player-controls {
     top: -1rem;
     left: 10rem;
+  }
+}
+
+/* Remove keyboard hotkeys info popup icon for touch screens */
+@media screen and (pointer: coarse) {
+  .open-popup {
+    display: none;
   }
 }
