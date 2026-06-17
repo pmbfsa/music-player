@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="%BASE_URL%favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A modern music player interface featuring album art, real-time progress tracking, and intuitive controls for play/pause, next, and previous tracks. Includes volume control with mute toggle, and keyboard shortcuts for power users — arrow keys to seek and adjust volume, N/B to switch tracks, P to play/pause, and M to mute. Comes preloaded with 6 curated tracks, running entirely in the browser with no database required."
+    />
     <title>Music Player</title>
     <script type="module" src="/src/main.js"></script>
   </head>
@@ -13,19 +17,20 @@
         <!-- Song -->
         <div class="image-container">
           <img
-            src="./src/assets/img/jacinto-1.jpg"
+            src="./images/song-1.webp"
             alt="Album Art"
             class="image"
             id="image"
+            fetchpriority="high"
           />
         </div>
-        <h2 class="title" id="title">Eletric Chill Machine</h2>
-        <h3 class="artist" id="artist">Jacinto</h3>
+        <h2 class="title" id="title">Eletrical Communication</h2>
+        <h3 class="artist" id="artist">Ganasia</h3>
         <audio src="./src/assets/music/jacinto-1.mp3" id="audio"></audio>
         <!-- Duration Wrapper -->
         <div class="duration-wrapper">
           <span id="current-time">0:00</span>
-          <span id="duration">0:00</span>
+          <span id="duration">4:39</span>
         </div>
         <!-- Audio Progress -->
         <div
